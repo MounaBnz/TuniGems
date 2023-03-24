@@ -37,7 +37,7 @@ h6 {
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
-  color: #a9d9e9;
+  color: #C1AF56;
 }
 
 /*--------------------------------------------------------------
@@ -156,7 +156,7 @@ h6 {
   height: 90px;
   transition: all 0.5s;
   z-index: 997;
-  background: rgba(52, 59, 64, 0.9);
+  background: #C1AF56;
 }
 
 #header #logo h1 {
@@ -184,7 +184,7 @@ h6 {
 }
 
 #header.header-scrolled {
-  background: rgba(52, 59, 64, 0.9);
+  background: #C1AF56;
   height: 70px;
   transition: all 0.5s;
 }
@@ -1025,7 +1025,7 @@ section {
 --------------------------------------------------------------*/
 .gallery .gallery-item {
   overflow: hidden;
-  border-right: 3px solid #6ab3d7;
+  border-right: 3px solid #55460C;
   border-bottom: 3px solid #454035;
 }
 
@@ -1105,7 +1105,7 @@ section {
 
 #contact .info i {
   font-size: 32px;
-  color: #2d95c9;
+  color: #55460C;
   float: left;
   line-height: 0;
 }
@@ -1145,7 +1145,7 @@ section {
 }
 
 #contact .social-links a:hover {
-  background: #2d95c9;
+  background: #55460C;
   color: #fff;
 }
 
@@ -1165,7 +1165,7 @@ section {
 #contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #2d95c9;
+  background: #55460C;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1200,11 +1200,11 @@ section {
 
 #contact .php-email-form input::focus,
 #contact .php-email-form textarea::focus {
-  background-color: #2d95c9;
+  background-color: #55460C;
 }
 
 #contact .php-email-form button[type=submit] {
-  background: #2d95c9;
+  background: #55460C;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1212,7 +1212,7 @@ section {
 }
 
 #contact .php-email-form button[type=submit]:hover {
-  background: #2d95c9;
+  background: #55460C;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1239,7 +1239,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #343b40;
+  background: #C1AF56;
   padding: 30px 0;
   color: #fff;
   font-size: 14px;

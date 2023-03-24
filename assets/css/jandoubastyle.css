@@ -1279,7 +1279,7 @@ section {
   margin-top: 15px;
   font-size: 18px;
   font-weight: 600;
-  color: #282828;
+  color: #432103;
 }
 
 .pricing .box h4 {
@@ -1305,7 +1305,7 @@ section {
 .pricing .box ul {
   padding: 20px 0;
   list-style: none;
-  color: #282828;
+  color: #351d00;
   text-align: center;
   line-height: 20px;
   font-size: 14px;
@@ -1322,7 +1322,7 @@ section {
 }
 
 .pricing .box ul .na {
-  color: #ccc;
+  color: #cccccc;
   text-decoration: line-through;
 }
 
@@ -1371,7 +1371,7 @@ section {
   z-index: 1;
   font-size: 13px;
   padding: 3px 25px 6px 25px;
-  background: #edfbf0;
+  background: #f8fbed;
   color: #55460C;
   border-radius: 50px;
 }

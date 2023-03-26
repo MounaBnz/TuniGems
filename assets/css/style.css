@@ -146,7 +146,7 @@ h6 {
   animation: none;
   border-radius: 0;
 }
-#
+
 
 
 /*--------------------------------------------------------------
@@ -1304,7 +1304,9 @@ section {
     transform: rotate(360deg);
   }
 }
-
+.mapdiv{
+  margin-top: -80px;
+}
 @keyframes animate-loading {
   0% {
     transform: rotate(0deg);
@@ -1314,6 +1316,44 @@ section {
     transform: rotate(360deg);
   }
 }
+
+.mapdiv{
+  margin: auto;
+ margin-top: -20px;
+background-color: #f7f7f7;
+  transition: 0.3s;
+
+}
+.custom-container {
+  max-width:100%;
+  height: 100%;
+
+}
+svg{
+  margin-top: -50px;
+}
+.mapdiv path {
+  fill:red;
+  stroke:#f7f7f7;
+  stroke-width:4px;
+  transition: fill 0.3s;
+
+}
+.img1{
+  float: right;
+  padding-top: 20px;
+  margin-right: 70px;
+  margin-top: 150px;
+}
+.mapdiv :hover {
+  fill:rgba(118, 145, 208, 0.25);
+  cursor: hand
+}
+.phrase{
+  float: right;
+  text-align: center;
+}
+
 
 /*--------------------------------------------------------------
 # Footer

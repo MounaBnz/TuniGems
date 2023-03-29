@@ -250,7 +250,7 @@ h6 {
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: #2d95c9;
+  background-color: #F9B31B;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
@@ -303,7 +303,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #2d95c9;
+  color: #F9B31B;
 }
 
 .navbar .dropdown:hover>ul {
@@ -408,7 +408,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #2d95c9;
+  color: #F9B31B;
 }
 
 .navbar-mobile .getstarted,
@@ -443,7 +443,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #2d95c9;
+  color: #F9B31B;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -536,8 +536,8 @@ h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #2d95c9;
-  border: 2px solid #2d95c9;
+  background: #F9B31B;
+  border: 2px solid #F9B31B;
 }
 
 /*--------------------------------------------------------------
@@ -674,11 +674,11 @@ section {
   flex-direction: column;
   text-align: center;
   border-radius: 50%;
-  border: 2px solid #2d95c9;
+  border: 2px solid #F9B31B;
 }
 
 #about .about-container .icon-box .icon i {
-  color: #2d95c9;
+  color: #F9B31B;
   font-size: 24px;
   line-height: 0;
 }
@@ -711,7 +711,7 @@ section {
 #facts .counters span {
   font-size: 48px;
   display: block;
-  color: #2d95c9;
+  color: #F9B31B;
 }
 
 #facts .counters p {
@@ -753,7 +753,7 @@ section {
   text-align: center;
   width: 72px;
   height: 72px;
-  background: #2d95c9;
+  background: #7D0B04;
 }
 
 #services .icon a {
@@ -768,15 +768,15 @@ section {
 
 #services .box:hover .icon {
   background: #fff;
-  border: 2px solid #2d95c9;
+  border: 2px solid #F9B31B;
 }
 
 #services .box:hover .icon i {
-  color: #2d95c9;
+  color: #F9B31B;
 }
 
 #services .box:hover .icon a {
-  color: #2d95c9;
+  color: #F9B31B;
 }
 
 #services .title {
@@ -905,7 +905,7 @@ section {
   bottom: -50px;
   z-index: 3;
   transition: all ease-in-out 0.3s;
-  background: #2d95c9;
+  background: #74150E;
   padding: 15px 20px;
 }
 
@@ -969,19 +969,19 @@ section {
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #2d95c9;
+  background-color: #74150E;
   opacity: 1;
-  border: 1px solid #2d95c9;
+  border: 1px solid #74150E;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #2d95c9;
-  background: #2d95c9;
+  background-color: #7D0B04;
+  background: #7D0B04;
 }
 
 .portfolio-details .portfolio-info {
   padding: 30px;
-  box-shadow: 0px 0 30px  #2d95c9;
+  box-shadow: 0px 0 30px  #F9B31B;
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -989,7 +989,7 @@ section {
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #0c1a68;
+  border-bottom: 1px solid #7D0B04
   
 }
 
@@ -1045,12 +1045,12 @@ section {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 45px;
-  color: white;
+  color: #7D0B04;
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: #6ab3d7;
+  color: #F38C00;
   margin: 0 0 0 45px;
 }
 
@@ -1077,7 +1077,7 @@ section {
   font-style: italic;
   margin: 0 15px 0 15px;
   padding: 20px 20px 60px 20px;
-  background: #7cc2d2;
+  background: #e39a69;
   position: relative;
   border-radius: 6px;
   position: relative;
@@ -1092,12 +1092,12 @@ section {
 .testimonials .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #6ab3d7;
+  background-color: #F38C00;
   opacity: 1;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #eaeaea;
+  background-color: #F9B31B;
 }
 
 /*--------------------------------------------------------------
@@ -1105,7 +1105,7 @@ section {
 --------------------------------------------------------------*/
 .gallery .gallery-item {
   overflow: hidden;
-  border-right: 3px solid #6ab3d7;
+  border-right: 3px solid #F9B31B;
   border-bottom: 3px solid #454035;
 }
 
@@ -1159,7 +1159,7 @@ section {
 }
 
 #team .member .social a:hover {
-  color: #2d95c9;
+  color: #F9B31B;
 }
 
 #team .member .social i {
@@ -1225,7 +1225,7 @@ section {
 }
 
 #contact .social-links a:hover {
-  background: #2d95c9;
+  background: #F9B31B;
   color: #fff;
 }
 

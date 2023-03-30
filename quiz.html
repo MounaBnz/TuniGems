@@ -121,32 +121,61 @@
 
 <script>
 function submitQuiz(event) {
-  event.preventDefault();
+    event.preventDefault();
 
 // get the selected answers from the quiz
 const q1 = document.querySelector('input[name="q1"]:checked').value;
-  const q2 = document.querySelector('input[name="q2"]:checked').value;
-  const q3 = document.querySelector('input[name="q3"]:checked').value;
-  const q4 = document.querySelector('input[name="q4"]:checked').value;
-  const q5 = document.querySelector('input[name="q5"]:checked').value;
+const q2 = document.querySelector('input[name="q2"]:checked').value;
+const q3 = document.querySelector('input[name="q3"]:checked').value;
+const q4 = document.querySelector('input[name="q4"]:checked').value;
+const q5 = document.querySelector('input[name="q5"]:checked').value;
+
 // calculate the result based on the selected answers
+const answerCounts = {
+  A: 0,
+  B: 0,
+  C: 0,
+  D: 0
+};
+
+answerCounts[q1]++;
+answerCounts[q2]++;
+answerCounts[q3]++;
+answerCounts[q4]++;
+answerCounts[q5]++;
+
 let destination, description, link;
-if (q1 === 'A' && q2 === 'A' && q3 === 'A' && q4 === 'A' && q5 === 'A') {
-  destination = 'Tozeur';
-  description = 'Located in the heart of the Tunisian Sahara, Tozeur is known for its breathtaking landscapes, traditional architecture, and date palm oasis.';
-  link = 'https://en.wikipedia.org/wiki/Tozeur';
-} else if (q1 === 'B' && q2 === 'B' && q3 === 'B' && q4 === 'B' && q5 === 'B') {
-  destination = 'Sousse';
-  description = 'Known for its beautiful beaches, lively nightlife, and ancient Medina, Sousse is a popular tourist destination in Tunisia.';
-  link = 'https://en.wikipedia.org/wiki/Sousse';
-} else if (q1 === 'C' && q2 === 'C' && q3 === 'C' && q4 === 'C' && q5 === 'C') {
-  destination = 'Bizerte';
-  description = 'Located in the northernmost part of Tunisia, Bizerte is a charming coastal town known for its historic landmarks, beautiful beaches, and unique cuisine.';
-  link = 'https://en.wikipedia.org/wiki/Bizerte';
-} else {
-  // handle invalid answers or no answers submitted
-  alert('Please select an answer for all quiz questions.');
-  return;
+
+// determine the most common answer
+const mostCommonAnswer = Object.keys(answerCounts).reduce((a, b) => answerCounts[a] > answerCounts[b] ? a : b);
+
+// set the destination based on the most common answer
+switch (mostCommonAnswer) {
+  case 'A':
+    destination = 'Tozeur';
+    description = 'Located in the heart of the Tunisian Sahara, Tozeur is known for its breathtaking landscapes, traditional architecture, and date palm oasis.';
+    link = 'https://en.wikipedia.org/wiki/Tozeur';
+    break;
+  case 'B':
+    destination = 'Sidi Bou Said';
+    description = 'Sidi Bou Said is a picturesque village on a hill overlooking the Mediterranean Sea, known for its blue-and-white architecture and charming streets.';
+    link = 'https://en.wikipedia.org/wiki/Sidi_Bou_Said';
+    break;
+  case 'C':
+    destination = 'Hammamet';
+    description = 'Hammamet is a popular coastal town known for its beautiful beaches, golf courses, and lively nightlife.';
+    link = 'https://en.wikipedia.org/wiki/Hammamet,_Tunisia';
+    break;
+  case 'D':
+    destination = 'Tataouine';
+    description = 'Tataouine is a desert city in southern Tunisia known for its unique architecture, Berber culture, and as the filming location for Star Wars: Episode IV – A New Hope.';
+    link = 'https://en.wikipedia.org/wiki/Tataouine';
+    break;
+  default:
+    // handle invalid answers or no answers submitted
+    //HEDHY MATEMCHICH W MANHEBBECH NKASSER RASSI MAAHA ;) 
+    document.getElementById('result').innerHTML = '<p>Please select an answer for all quiz questions.</p>';
+    return;
 }
 
  // display the result in a new window

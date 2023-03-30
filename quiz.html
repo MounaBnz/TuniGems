@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TuniQuizz - TuniGems</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div id="logo">
+        <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
+
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="index.html"> About</a></li>
+          <li><a class="nav-link" href="index.html"> Services</a></li>
+          <li><a class="nav-link" href="index.html">Testimonials</a></li>
+          <li><a class="nav-link" href="index.html">Team</a></li>
+          <li><a class="nav-link" href="quiz.html">TuniQuizz</a></li>
+          <li><a class="nav-link" href="index.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Let your choices take you </h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>TuniQuizz</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- QUIZZZZZZZZ-->
+<section id="quiz">
+  <h2>Discover Your Ideal Destination in Tunisia</h2>
+  <form onsubmit="submitQuiz(event)">
+    <p>1. What type of scenery do you prefer?</p>
+    <label><input type="radio" name="q1" value="A">A. Desert and sand dunes</label><br>
+    <label><input type="radio" name="q1" value="B">B. Mountains and valleys</label><br>
+    <label><input type="radio" name="q1" value="C">C. Coastal and beaches</label><br>
+    <label><input type="radio" name="q1" value="D">D. Historic sites and ruins</label><br>
+
+    <p>2. What kind of activities do you enjoy the most?</p>
+    <label><input type="radio" name="q2" value="A">A. Adventure sports such as sandboarding, quad biking, or camel riding</label><br>
+    <label><input type="radio" name="q2" value="B">B. Hiking and trekking</label><br>
+    <label><input type="radio" name="q2" value="C">C. Water sports such as snorkeling, scuba diving, or sailing</label><br>
+    <label><input type="radio" name="q2" value="D">D. Exploring ancient cities and cultural heritage</label><br>
+
+    <p>3. How important is food to you when traveling?</p>
+    <label><input type="radio" name="q3" value="A">A. I love to try local street food and exotic cuisine</label><br>
+    <label><input type="radio" name="q3" value="B">B. I prefer simple and healthy meals with fresh ingredients</label><br>
+    <label><input type="radio" name="q3" value="C">C. I like to dine in elegant restaurants and taste fine wines</label><br>
+    <label><input type="radio" name="q3" value="D">D. I'm not very adventurous when it comes to food, but I like to try local specialties</label><br>
+
+    <p>4. What's your preferred mode of transportation?</p>
+    <label><input type="radio" name="q4" value="A">A. 4x4 jeep or ATV</label><br>
+    <label><input type="radio" name="q4" value="B">B. Trekking or hiking</label><br>
+    <label><input type="radio" name="q4" value="C">C. Boat or yacht</label><br>
+    <label><input type="radio" name="q4" value="D">D. Private car or public transportation</label><br>
+
+    <p>5. How important is interacting with locals to you?</p>
+    <label><input type="radio" name="q5" value="A">A. I want to learn about local culture and customs</label><br>
+    <label><input type="radio" name="q5" value="B">B. I prefer to immerse myself in nature and avoid crowded places</label><br>
+    <label><input type="radio" name="q5" value="C">C. I like to meet new people and socialize with locals</label><br>
+    <label><input type="radio" name="q5" value="D">D. I enjoy exploring on my own and don't need much interaction with locals</label>
+
+    <!-- add the other quiz questions here -->
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="result" style="display: none;">
+    <h3>Your Ideal Destination in Tunisia:</h3>
+    <p id="destination"></p>
+    <p id="description"></p>
+    <a id="link" href="#">Learn more</a>
+  </div>
+</section>
+
+<script>
+function submitQuiz(event) {
+  event.preventDefault();
+
+// get the selected answers from the quiz
+const q1 = document.querySelector('input[name="q1"]:checked').value;
+  const q2 = document.querySelector('input[name="q2"]:checked').value;
+  const q3 = document.querySelector('input[name="q3"]:checked').value;
+  const q4 = document.querySelector('input[name="q4"]:checked').value;
+  const q5 = document.querySelector('input[name="q5"]:checked').value;
+// calculate the result based on the selected answers
+let destination, description, link;
+if (q1 === 'A' && q2 === 'A' && q3 === 'A' && q4 === 'A' && q5 === 'A') {
+  destination = 'Tozeur';
+  description = 'Located in the heart of the Tunisian Sahara, Tozeur is known for its breathtaking landscapes, traditional architecture, and date palm oasis.';
+  link = 'https://en.wikipedia.org/wiki/Tozeur';
+} else if (q1 === 'B' && q2 === 'B' && q3 === 'B' && q4 === 'B' && q5 === 'B') {
+  destination = 'Sousse';
+  description = 'Known for its beautiful beaches, lively nightlife, and ancient Medina, Sousse is a popular tourist destination in Tunisia.';
+  link = 'https://en.wikipedia.org/wiki/Sousse';
+} else if (q1 === 'C' && q2 === 'C' && q3 === 'C' && q4 === 'C' && q5 === 'C') {
+  destination = 'Bizerte';
+  description = 'Located in the northernmost part of Tunisia, Bizerte is a charming coastal town known for its historic landmarks, beautiful beaches, and unique cuisine.';
+  link = 'https://en.wikipedia.org/wiki/Bizerte';
+} else {
+  // handle invalid answers or no answers submitted
+  alert('Please select an answer for all quiz questions.');
+  return;
+}
+
+ // display the result in a new window
+let resultWindow = window.open('', 'quizResult', 'width=600,height=400');
+resultWindow.document.write(`
+  <html>
+    <head>
+      <title>Quiz Result</title>
+      <style>
+        body {
+          background-color: #F2F2F2;
+          font-family: Arial, sans-serif;
+          font-size: 16px;
+        }
+        h1, h2 {
+          color: #74150E;
+          text-align: center;
+        }
+        p {
+          color: #5C5C5C;
+          text-align: justify;
+          margin-bottom: 20px;
+        }
+        a {
+          color: #74150E;
+        }
+        .container {
+          max-width: 600px;
+          margin: 20px auto;
+          padding: 20px;
+          background-color: #FFFFFF;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px 0px #F9B31B;
+        }
+        .container p:last-of-type {
+          margin-bottom: 0;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>TuniQuizz Result</h1>
+        <h2>Your recommended destination:</h2>
+        <p>${destination}</p>
+        <p>${description}</p>
+        <p><a href="${link}" target="_blank">Learn more about ${destination}</a></p>
+        <p>Click <a href="#" onclick="window.close()">here</a> to close this window.</p>
+      </div>
+    </body>
+  </html>
+`);
+
+}
+
+</script>
+
+
+
+<!--QUIZZZZZ-->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

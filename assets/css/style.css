@@ -1334,7 +1334,7 @@ svg{
   margin-top: -50px;
 }
 .mapdiv path {
-  fill:red;
+  fill:#9a1f16;
   stroke:#f7f7f7;
   stroke-width:4px;
   transition: fill 0.3s;

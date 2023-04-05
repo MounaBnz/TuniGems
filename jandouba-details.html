@@ -164,6 +164,12 @@
     </section><!-- End Portfolio Details Section -->
 
   </main><!-- End #main -->
+
+
+
+
+
+  
 <!-- ======= Pricing Section ======= -->
 <section id="pricing" class="pricing">
   <div class="container">
@@ -178,7 +184,13 @@
       <div class="col-lg-4 col-md-6">
         <div class="box">
           <h3>Pack Détente en Famille</h3>
-          <h4><sup>DT</sup>150<span> / personne</span></h4>
+          <div>
+            <label for="pack1-size">Nombre de membres:</label>
+            <input type="number" id="pack1-size" name="pack1-size" min="1" max="10" value="1">
+            <button  id="pack1-add-member" type="button" class="btn btn-warning btn-sm">+</button>
+            <button id="pack1-remove-member" type="button" class="btn btn-secondary btn-sm" disabled>-</button>
+          </div>
+          <h4><sup>DT</sup><span id="pack1-price">150</span><span></span></h4>
           <ul>
             <li>Hébergement en maison d'hôte</li>
             <li>Activités de plein air adaptées aux familles, telles que des balades à vélo et des pique-niques en pleine nature</li>
@@ -194,11 +206,18 @@
       </div>
       
 
+
       <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
         <div class="box recommended">
           <span class="recommended-badge">Recommended</span>
           <h3>Pack Aventure</h3>
-          <h4><sup>DT</sup>170<span> / personne</span></h4>
+          <div>
+            <label for="pack2-size">Nombre de membres:</label>
+            <input type="number" id="pack2-size" name="pack1-size" min="1" max="10" value="1">
+            <button  id="pack2-add-member" type="button" class="btn btn-warning btn-sm">+</button>
+            <button id="pack2-remove-member" type="button" class="btn btn-secondary btn-sm" disabled>-</button>
+          </div>
+          <h4><sup>DT</sup><span id="pack2-price">170</span><span></span></h4>
           <ul>
             <li>Hébergement en camping ou en maison d'hôte</li>
             <li>Randonnées en montagne, escalade, tyrolienne, canyoning, etc.</li>
@@ -213,11 +232,17 @@
           </div>
         </div>
       </div>
-
+      
       <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
         <div class="box">
           <h3>Pack de Voyage Culinaire </h3>
-          <h4><sup>DT</sup>130<span> / personne</span></h4>
+          <div>
+            <label for="pack3-size">Nombre de membres:</label>
+            <input type="number" id="pack3-size" name="pack3-size" min="1" max="10" value="1">
+            <button  id="pack3-add-member" type="button" class="btn btn-warning btn-sm">+</button>
+            <button id="pack3-remove-member" type="button" class="btn btn-secondary btn-sm" disabled>-</button>
+          </div>
+          <h4><sup>DT</sup><span id="pack3-price">130</span><span></span></h4>
           <ul>
             <li>Hébergement en maison d'hôte ou en camping</li>
             <li>Dégustation de spécialités culinaires locales</li>
@@ -233,8 +258,113 @@
       </div>
 
     </div>
-
+    
   </div>
+<script>
+ // Pack 1 JavaScript code
+const pack1SizeInput = document.getElementById("pack1-size");
+const pack1PriceSpan = document.getElementById("pack1-price");
+const pack1AddMemberBtn = document.getElementById("pack1-add-member");
+const pack1RemoveMemberBtn = document.getElementById("pack1-remove-member");
+
+let pack1Price = 150; // default price for one member
+
+pack1SizeInput.addEventListener("change", updatePack1Price);
+pack1AddMemberBtn.addEventListener("click", addPack1Member);
+pack1RemoveMemberBtn.addEventListener("click", removePack1Member);
+
+function updatePack1Price() {
+  const pack1Size = pack1SizeInput.value;
+  pack1PriceSpan.innerText = pack1Price * pack1Size;
+  
+  // enable/disable remove member button based on pack size
+  if (pack1Size > 1) {
+    pack1RemoveMemberBtn.disabled = false;
+  } else {
+    pack1RemoveMemberBtn.disabled = true;
+  }
+}
+
+function addPack1Member() {
+  pack1SizeInput.value++;
+  updatePack1Price();
+}
+
+function removePack1Member() {
+  pack1SizeInput.value--;
+  updatePack1Price();
+}
+// Pack 2 JavaScript code
+const pack2SizeInput = document.getElementById("pack2-size");
+const pack2PriceSpan = document.getElementById("pack2-price");
+const pack2AddMemberBtn = document.getElementById("pack2-add-member");
+const pack2RemoveMemberBtn = document.getElementById("pack2-remove-member");
+
+let pack2Price = 170; // default price for one member
+
+pack2SizeInput.addEventListener("change", updatePack2Price);
+pack2AddMemberBtn.addEventListener("click", addPack2Member);
+pack2RemoveMemberBtn.addEventListener("click", removePack2Member);
+
+function updatePack2Price() {
+  const pack2Size = pack2SizeInput.value;
+  pack2PriceSpan.innerText = pack2Price * pack2Size;
+  
+  // enable/disable remove member button based on pack size
+  if (pack2Size > 1) {
+    pack2RemoveMemberBtn.disabled = false;
+  } else {
+    pack2RemoveMemberBtn.disabled = true;
+  }
+}
+
+function addPack2Member() {
+  pack2SizeInput.value++;
+  updatePack2Price();
+}
+
+function removePack2Member() {
+  pack2SizeInput.value--;
+  updatePack2Price();
+}
+
+// Pack 3 JavaScript code
+const pack3SizeInput = document.getElementById("pack3-size");
+const pack3PriceSpan = document.getElementById("pack3-price");
+const pack3AddMemberBtn = document.getElementById("pack3-add-member");
+const pack3RemoveMemberBtn = document.getElementById("pack3-remove-member");
+
+let pack3Price = 130; // default price for one member
+
+pack3SizeInput.addEventListener("change", updatePack3Price);
+pack3AddMemberBtn.addEventListener("click", addPack3Member);
+pack3RemoveMemberBtn.addEventListener("click", removePack3Member);
+
+function updatePack3Price() {
+  const pack3Size = pack3SizeInput.value;
+  pack3PriceSpan.innerText = pack3Price * pack3Size;
+  
+  // enable/disable remove member button based on pack size
+  if (pack3Size > 1) {
+    pack3RemoveMemberBtn.disabled = false;
+  } else {
+    pack3RemoveMemberBtn.disabled = true;
+  }
+}
+
+function addPack3Member() {
+  pack3SizeInput.value++;
+  updatePack3Price();
+}
+
+function removePack3Member() {
+  pack3SizeInput.value--;
+  updatePack3Price();
+}
+
+
+  </script>
+
 </section><!-- End Pricing Section -->
 
   

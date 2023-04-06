@@ -146,7 +146,7 @@ h6 {
   animation: none;
   border-radius: 0;
 }
-#
+
 
 
 /*--------------------------------------------------------------
@@ -519,6 +519,25 @@ h6 {
     margin-bottom: 30px;
   }
 }
+.custom-btn {
+  background-color: #55460C;
+  color: #fff;
+}
+
+.custom-btn:hover {
+  background-color: #fff;
+  color: #55460C !important;
+}
+
+.custom-btn:focus {
+  background-color: #55460C;
+  color: #fff;
+}
+
+.custom-btn:not(.collapsed).active {
+  background-color: transparent !important;
+}
+
 
 #hero .btn-get-started {
   font-family: "Poppins", sans-serif;

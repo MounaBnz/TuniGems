@@ -1350,6 +1350,14 @@ section {
   text-align: center;
 }
 
+#pack1-price, #pack2-price, #pack3-price {
+  font-size: 42px;
+  color: #55460C;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 20px;
+}
+
 .pricing .box .btn-buy {
   display: inline-block;
   padding: 10px 40px 12px 40px;
